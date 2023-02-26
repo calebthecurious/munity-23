@@ -1,12 +1,12 @@
 import React from "react";
-import "./skills.scss";
+import "./pay.scss";
 
-const Skills = () => {
+const Pay = () => {
   return (
     <div>
-      <h1>Skills</h1>
+      <h1>Pay</h1>
     </div>
   );
 };
 
-export default Skills;
+export default Pay;

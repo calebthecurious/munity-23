@@ -1,11 +1,12 @@
 import React from "react";
+import "./register.scss";
 
-const Add = () => {
+const Register = () => {
   return (
     <div>
-      <h1>Add</h1>
+      <h1>Register</h1>
     </div>
   );
 };
 
-export default Add;
+export default Register;

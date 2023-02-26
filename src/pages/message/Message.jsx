@@ -1,11 +1,12 @@
 import React from "react";
+import "./message.scss";
 
-const Add = () => {
+const Message = () => {
   return (
     <div>
-      <h1>Add</h1>
+      <h1>Message</h1>
     </div>
   );
 };
 
-export default Add;
+export default Message;
