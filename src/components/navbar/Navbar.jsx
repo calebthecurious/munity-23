@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+
+  const { pathname } = useLocation();
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -25,13 +27,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className={active ? "navbar active" : "navbar"}>
+    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          {/* <Link to="/"> */}
-          <span className="text">Munity</span>
-          <span className="dot">.</span>
-          {/* </Link> */}
+          <Link to="/" className="link">
+            <span className="text">Munity</span>
+            <span className="dot">.</span>
+          </Link>
         </div>
         <div className="links">
           <div>About Munity</div>
@@ -49,25 +51,35 @@ const Navbar = () => {
                 <div className="options">
                   {currentUser?.isGuide && (
                     <>
-                      <span>Skills</span>
-                      <span>Add New Skill</span>
+                      <Link className="link" to="/mySkills">
+                        Skills
+                      </Link>
+                      <Link className="link" to="/add">
+                        Add New Skill
+                      </Link>
                     </>
                   )}
-                  <span>Orders</span>
-                  <span>Messages</span>
-                  <span>Logout</span>
+                  <Link className="link" to="/orders">
+                    Orders
+                  </Link>
+                  <Link className="link" to="/messages">
+                    Messages
+                  </Link>
+                  <Link className="link" to="/">
+                    Logout
+                  </Link>
                 </div>
               )}
             </div>
           )}
         </div>
       </div>
-      {active && (
+      {(active || pathname !== "/") && (
         <>
           <hr />
           <div className="menu">
-            <span>test1</span>
-            <span>test2</span>
+            <Link className="link">test1</Link>
+            <Link className="link">test2</Link>
           </div>
         </>
       )}
