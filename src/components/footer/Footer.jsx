@@ -85,7 +85,7 @@ function Footer() {
             </div>
             <div className="link">
               <img src="/img/coin.png" alt="" />
-              <span>USD</span>
+              <span>AUD</span>
             </div>
             <img src="/img/accessibility.png" alt="" />
           </div>
