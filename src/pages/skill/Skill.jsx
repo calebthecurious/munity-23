@@ -29,7 +29,7 @@ const Skill = () => {
             I use AI to create art. I will teach you how to use AI to create
             art.
           </p>
-          <div className="seller">
+          <div className="guide">
             <h2>About the Guide</h2>
             <div className="user">
               <img src="/img/caleb-anime.png" alt="" />

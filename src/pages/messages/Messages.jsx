@@ -6,7 +6,7 @@ const Messages = () => {
   const currentUser = {
     id: 1,
     username: "Anna",
-    isSeller: true,
+    isGuide: true,
   };
 
   const message = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
@@ -22,7 +22,7 @@ const Messages = () => {
         </div>
         <table>
           <tr>
-            <th>{currentUser.isSeller ? "Buyer" : "Seller"}</th>
+            <th>{currentUser.isGuide ? "Buyer" : "Guide"}</th>
             <th>Last Message</th>
             <th>Date</th>
             <th>Action</th>

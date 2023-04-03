@@ -6,7 +6,7 @@ const Orders = () => {
   const currentUser = {
     id: 1,
     username: "Anna",
-    isSeller: true,
+    isGuide: true,
   };
 
   return (
@@ -20,7 +20,7 @@ const Orders = () => {
             <th>Image</th>
             <th>Title</th>
             <th>Price</th>
-            {<th>{currentUser.isSeller ? "Buyer" : "Seller"}</th>}
+            {<th>{currentUser.isGuide ? "Buyer" : "Guide"}</th>}
             <th>Contact</th>
           </tr>
           <tr>

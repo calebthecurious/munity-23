@@ -48,7 +48,7 @@ function Footer() {
             <span>Affiliates</span>
             <span>Podcast</span>
             <span>Invite a Friend</span>
-            <span>Become a Seller</span>
+            <span>Become a Guide</span>
             <span>Community Standards</span>
           </div>
           <div className="item">

@@ -6,7 +6,7 @@ import SkillCard from "../../components/skillCard/SkillCard";
 
 const Skills = () => {
   const [open, setOpen] = useState(false);
-  const [sort, setSort] = useState("sales");
+  const [sort, setSort] = useState("lessons");
 
   const reSort = (type) => {
     setSort(type);
@@ -31,15 +31,15 @@ const Skills = () => {
           <div className="right">
             <span className="sortBy">SortBy</span>
             <span className="sortType">
-              {sort === "sales" ? "Best Selling" : "Newest"}
+              {sort === "lessons" ? "Best Selling" : "Newest"}
             </span>
             <img src="./img/down.png" alt="" onClick={() => setOpen(!open)} />
             {open && (
               <div className="rightMenu">
-                {sort === "sales" ? (
+                {sort === "lessons" ? (
                   <span onClick={() => reSort("createdAt")}>Newest</span>
                 ) : (
-                  <span onClick={() => reSort("sales")}>Best Selling</span>
+                  <span onClick={() => reSort("lessons")}>Best Lessons</span>
                 )}
               </div>
             )}

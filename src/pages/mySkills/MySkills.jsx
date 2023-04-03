@@ -6,15 +6,15 @@ function MySkills() {
   const currentUser = {
     id: 1,
     username: "Anna",
-    isSeller: true,
+    isGuide: true,
   };
 
   return (
     <div className="mySkills">
       <div className="container">
         <div className="title">
-          <h1>{currentUser.isSeller ? "Skills" : "Orders"}</h1>
-          {currentUser.isSeller && (
+          <h1>{currentUser.isGuide ? "Skills" : "Orders"}</h1>
+          {currentUser.isGuide && (
             <Link to="/add">
               <button>Add New Skill</button>
             </Link>
@@ -25,7 +25,7 @@ function MySkills() {
             <th>Image</th>
             <th>Title</th>
             <th>Price</th>
-            <th>Sales</th>
+            <th>Lessons</th>
             <th>Action</th>
           </tr>
           <tr>
